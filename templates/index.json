@@ -1,0 +1,8 @@
+{
+    "section":{
+        "announcement":{
+            "type":"announcement-bar"
+        }
+    },
+    "order":["announcement"]
+}
