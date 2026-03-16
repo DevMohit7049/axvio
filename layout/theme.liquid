@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      {{ content_for_header }}
+      {{ 'style.css' | asset_url | stylesheet_tag }}
+    </head>
+    <body>
+      {% section 'announcement-bar' %}
+      {% section 'header' %}
+      <main>
+        {{ content_for_layout }}  
+      <main>
+
+        {% section 'footer' %}
+    </body>
+</html>

@@ -1,0 +1,32 @@
+{% if section.settings.show_bar %}
+    <div class="announcement-bar">
+       <p>
+        {{ section.settings.text }}
+        {% if section.settings.link !=blank %}
+          <a href="{{ section.settings.link }}">Shop Now</a>
+        {% endif %}
+       </p>
+    </div>
+{% schema %}
+ {
+   "name": "announcement bar",
+   "settings":[{
+       "type": "checkbox",
+       "id":"show_bar",
+       "label":"Show announcement bar",
+       "default":true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "announcement text",
+      "default":"Free shiping on orders above 50",
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+]
+ }
+{% endschema %}
