@@ -1,35 +1,58 @@
+
 {% if section.settings.show_bar %}
     <div class="announcement-bar">
-       <p>
-        {{ section.settings.text }}
-        {% if section.settings.link !=blank %}
-          <a href="{{ section.settings.link }}">Shop Now</a>
-        {% endif %}
-       </p>
+       <button class="arrow left">&#10094;</button>
+
+       <div class="announcement-text">
+          {% for block in section.blocks %}
+             <span class="message {% if forloop.first %}active{% endif %}" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+             </span>
+          {% endfor %}
+       </div>
+
+       <button class="arrow right">&#10095;</button>
     </div>
 {% endif %}
+
+
 
 {% schema %}
  {
    "name": "announcement bar",
    "settings":[
-    {
+     {
        "type": "checkbox",
-       "id":"show_bar",
-       "label":"Show announcement bar",
+       "id": "show_bar",
+       "label": "show announcemnet bar",
        "default":true
-    },
-    {
-      "type": "text",
-      "id": "text",
-      "label": "announcement text",
-      "default":"Free shiping on orders above 50",
-    },
-    {
-      "type": "url",
-      "id": "link",
-      "label": "Link"
-    }
-]
+     },
+],
+"blocks": [
+  {
+    "type": "message",
+     "name": "message",
+     "settings": [
+      {
+        "type":"text",
+        "id": "message",
+        "label":"Message Text",
+        "default": "Free shipping over $75 USD"
+      }
+     ]
+  }
+],
+"max_blocks": 5,
+ "presets": [
+  {
+    "name": "Announcement Bar",
+    "blocks": [
+      {
+       "type":"message",
+       "type":"message"
+      }
+    ]
+  }
+ ]
  }
 {% endschema %}

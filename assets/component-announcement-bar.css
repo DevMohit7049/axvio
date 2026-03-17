@@ -1,0 +1,20 @@
+/* component-announcement-bar.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.announcement-bar {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.announcement-bar a {
+  color: #fff;
+  text-decoration: underline;
+  margin-left: 5px;
+}
