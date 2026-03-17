@@ -1,0 +1,22 @@
+<section> 
+    <h1>Home page</h1>
+</section>
+
+{% schema %}
+ {
+   "name": "home",
+   "settings":[
+    {
+       "type": "checkbox",
+       "id":"show_bar",
+       "label":"Show Home",
+       "default":true
+    },
+    {
+      "type": "text",
+      "id": "home_text",
+      "label": "announcement text",
+      "default":"Free shiping on orders above 50"
+    }]
+ }
+{% endschema %}

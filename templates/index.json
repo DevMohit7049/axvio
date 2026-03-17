@@ -1,8 +1,8 @@
 {
-    "section":{
-        "announcement":{
-            "type":"announcement-bar"
-        }
+    "sections":{
+        "home":{
+           "type":"home"
+        },
     },
-    "order":["announcement"]
+    "order":["home"]
 }
