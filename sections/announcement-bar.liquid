@@ -6,7 +6,7 @@
        <div class="announcement-text">
           {% for block in section.blocks %}
              <span class="message {% if forloop.first %}active{% endif %}" {{ block.shopify_attributes }}>
-                {{ block.settings.text }}
+                {{ block.settings.message }}
              </span>
           {% endfor %}
        </div>
@@ -49,7 +49,9 @@
     "blocks": [
       {
        "type":"message",
-       "type":"message"
+      },
+      {
+       "type": "message"
       }
     ]
   }
