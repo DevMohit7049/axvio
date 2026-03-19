@@ -9,12 +9,12 @@
  */
 {
   "sections": {
-    "home": {
-      "type": "home",
+    "hero": {
+      "type": "hero",
       "settings": {}
     }
   },
   "order": [
-    "home"
+    "hero"
   ]
 }

@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device.width , initial-scale=1.0">
+      <title>Apple</title>
       {{ content_for_header }}
-      {{ 'style.css' | asset_url | stylesheet_tag }}
-      {{ 'component-announcement-bar.css' | asset_url | stylesheet_tag}}
-      {{ 'component-announcement-bar.js' | asset_url | script_tag }}
     </head>
     <body>
-      {% section 'announcement-bar' %}
-      {% section 'header' %}
-      <main>
-        {{ content_for_layout }}  
-      <main>
 
-        {% section 'footer' %}
+      <main id="main">
+        {{ content_for_layout }}  
+      </main>
     </body>
 </html>
