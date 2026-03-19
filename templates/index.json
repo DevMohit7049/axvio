@@ -11,11 +11,7 @@
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {
-        "title_text": "hello",
-        "description_text": "this is description text",
-        "image": "shopify://shop_images/one.jpg"
-      }
+      "settings": {}
     }
   },
   "order": [
