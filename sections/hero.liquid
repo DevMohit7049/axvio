@@ -1,16 +1,31 @@
 <style>
-
+  
 </style>
 
 <section>
- 
+  <div>
+    {% if section.settings.image!=blank %}
+        <div class="with-image">
+            <div class="content-container">
+                <h1>{{ section.settings.title_text }}</h1>  
+            </div>
+        </div>
+    {% else %}
+    
+    {% endif %}
+  </div>
 </section>
 
 {% schema %}
  {
   "name": "hero",
   "settings": [
-
+    {
+       "type": "text",
+       "id": "title_text",
+       "label": "Title Text",
+       "default":"hello"
+    }
   ],
   "presets": [
     {
