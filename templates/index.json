@@ -11,9 +11,7 @@
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {
-        "title_text": "Apple"
-      }
+      "settings": {}
     }
   },
   "order": [

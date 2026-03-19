@@ -4,15 +4,15 @@
 
 <section>
   <div>
-    {% if section.settings.image!=blank %}
+    {% comment %} {% if section.settings.image!=blank %} {% endcomment %}
         <div class="with-image">
             <div class="content-container">
                 <h1>{{ section.settings.title_text }}</h1>  
             </div>
         </div>
-    {% else %}
+    {% comment %} {% else %}
     
-    {% endif %}
+    {% endif %} {% endcomment %}
   </div>
 </section>
 
