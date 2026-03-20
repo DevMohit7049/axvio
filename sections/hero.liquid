@@ -1,37 +1,111 @@
-<style>
-  
-</style>
-
 <section>
   <div>
-    {% if section.settings.image!=blank %}
-        <div class="with-image">
-            <div class="content-container">
-                <h1>{{ section.settings.title_text }}</h1>  
+    {% if section.settings.image != blank %}
+      <div class="with-image">
+        <div class="content-container">
+          <h1>{{ section.settings.title_text }}</h1>
+          <p>{{ section.settings.description_text }}</p>
+
+          {% if section.blocks.size == 0 %}
+            <div class="buttons">
+              <a href="#" class="button">Learn More</a>
+              <a href="#" class="button">Buy Now</a>
             </div>
+          {% else %}
+            <div class="buttons_dynamic">
+              <a href="{{ block.settings.button_url }}" class="button">{{ block.settings.button_text | escape }}</a>
+            </div>
+          {% endif %}
         </div>
+      </div>
     {% else %}
-    
+      
+      <div class="default">
+        <h1>{{ section.settings.title_text }}</h1>
+        <p class="description">{{ section.settings.description_text }}</p>
+
+        {% if section.blocks.size == 0 %}
+          <div class="buttons">
+            <a href="#" class="button">Learn More</a>
+            <a href="#" class="button">Buy Now</a>
+          </div>
+        {% else %}
+          {% for block in section.blocks %}
+            <div class="buttons-dynamic">
+              <a href="{{ block.settings.button_url }}" class="button">{{ block.settings.button_text | escape }}</a>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
     {% endif %}
   </div>
 </section>
 
+<style>
+  .default{
+     background-image:url("{{ 'one.jpg' | asset_url }}");
+     width:100%;
+     height:70vh;
+     background-size:cover;
+     background-position:center;
+  }
+
+    .with-image{
+     background-image:url("{{ section.settings.image | image_url }}");
+     width:100%;
+     height:70vh;
+     background-size:cover;
+     background-position:center;
+  }
+
+
+  .content-container{
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    z-index:2;
+  }
+
+  h1{
+     font-size:3rem;
+     margin-bottom:1rem;
+     color:black;
+  }
+</style>
+
 {% schema %}
- {
+{
   "name": "hero",
   "settings": [
     {
-       "type": "text",
-       "id": "title_text",
-       "label": "Title Text",
-       "default":"hello"
+      "type": "text",
+      "id": "title_text",
+      "label": "Title Text",
+      "default": "hello"
+    },
+
+    {
+      "type": "text",
+      "id": "description_text",
+      "label": "Description",
+      "default": "this is description text"
+    },
+
+    {
+     "type": "image_picker",
+     "id": "image",
+     "label": "image",
+     "info": "400 X 120px "
+    
     }
+
   ],
   "presets": [
     {
-     "name":"hero"
+      "name": "hero"
     }
-
   ]
- }
+}
 {% endschema %}
