@@ -11,18 +11,6 @@
   "sections": {
     "hero": {
       "type": "hero",
-      "blocks": {
-        "text_qTVmRV": {
-          "type": "text",
-          "settings": {
-            "button_text": "Buy Now",
-            "button_url": "shopify://collections/all"
-          }
-        }
-      },
-      "block_order": [
-        "text_qTVmRV"
-      ],
       "settings": {
         "title_text": "this is heading",
         "description_text": "this is description text",
