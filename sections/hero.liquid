@@ -12,9 +12,11 @@
               <a href="#" class="button">Buy Now</a>
             </div>
           {% else %}
-            <div class="buttons_dynamic">
-              <a href="{{ block.settings.button_url }}" class="button">{{ block.settings.button_text | escape }}</a>
-            </div>
+            {% for block in section.blocks %}
+              <div class="buttons_dynamic">
+                <a href="{{ block.settings.button_url }}" class="button">{{ block.settings.button_text | escape }}</a>
+              </div>
+            {% endfor %}
           {% endif %}
         </div>
       </div>
@@ -41,90 +43,90 @@
 </section>
 
 <style>
-  .default{
-     background-image:url("{{ 'one.jpg' | asset_url }}");
-     width:100%;
-     height:70vh;
-     background-size:cover;
-     background-position:center;
-  }
-
-    .with-image{
-     background-image:url("{{ section.settings.image | image_url }}");
-     width:100%;
-     height:70vh;
-     background-size:cover;
-     background-position:center;
-  }
-
-
-  .content-container{
-    position:absolute;
-    top:20%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    z-index:2;
-    color:white;
-  }
-
-  h1{
-     font-size:3rem;
-     margin-bottom:1rem;
-     color:black;
-  }
-  .description{
-    font-size:3rem;
-    margin-bottom:1rem;
-    color:black;
-  }
-
-  .button-dynamic{
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    gap:10px;
-  }
-
-  .button{
-    margin:1px;
-    padding:10px 20px;
-    background-color:#007bff;
-    text-decoration:none;
-    border-radius:25px;
-    font-size:1rem;
-  }
-
-  .button:hover{
-    background-color:#06488f;
-  }
-
-  @media screen and (max-size:786){
-    .content-container{
-      max-width:40%;
-      top:19%;
+    .default{
+       background-image:url("{{ 'one.jpg' | asset_url }}");
+       width:100%;
+       height:70vh;
+       background-size:cover;
+       background-position:center;
     }
+
+      .with-image{
+       background-image:url("{{ section.settings.image | image_url }}");
+       width:100%;
+       height:70vh;
+       background-size:cover;
+       background-position:center;
+    }
+
+
+    .content-container{
+      position:absolute;
+      top:20%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      text-align:center;
+      z-index:2;
+      color:white;
+    }
+
     h1{
-      font-size:1rem;
+       font-size:3rem;
+       margin-bottom:1rem;
+       color:black;
+    }
+    .description{
+      font-size:3rem;
       margin-bottom:1rem;
       color:black;
     }
 
-      .button-dynamic{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    gap:10px;
-  }
-
-  .buttons{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    gap:10px;
-
+    .button-dynamic{
+      display:flex;
+      flex-direction:row;
+      justify-content:center;
+      gap:10px;
     }
-}
+
+    .button{
+      margin:1px;
+      padding:10px 20px;
+      background-color:#007bff;
+      text-decoration:none;
+      border-radius:25px;
+      font-size:1rem;
+    }
+
+    .button:hover{
+      background-color:#06488f;
+    }
+
+    @media screen and (max-size:786){
+      .content-container{
+        max-width:40%;
+        top:19%;
+      }
+      h1{
+        font-size:1rem;
+        margin-bottom:1rem;
+        color:black;
+      }
+
+        .button-dynamic{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:10px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:10px;
+
+      }
+  }
 </style>
 
 {% schema %}
@@ -156,20 +158,20 @@
   "blocks": [
     {
       "type": "text",
-      "name":"text button",
+      "name": "text button",
       "settings": [
         {
-         "type": "text",
-         "id": "button_text",
-         "label": "Button Text",
-         "default":"Button"
-       },
-       {
-         "type": "url",
-         "id": "button_url",
-         "label": "Button Url",
-       }
-     ]
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Button"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Url"
+        }
+      ]
     }
   ],
 
