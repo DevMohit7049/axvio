@@ -11,6 +11,18 @@
   "sections": {
     "hero": {
       "type": "hero",
+      "blocks": {
+        "text_rfc6KF": {
+          "type": "text",
+          "settings": {
+            "button_text": "Button",
+            "button_url": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "text_rfc6KF"
+      ],
       "settings": {
         "title_text": "this is heading",
         "description_text": "this is description text",
