@@ -1,6 +1,23 @@
-<header>
-    
-</header>
+<nav class="header-nav">
+  <div class="left-nav">
+    <a href="/">
+      <img
+        width="15"
+        height="18"
+        loading="lazy"
+        src="{{ 'logo.svg' | asset_url }}"
+      >
+    </a>
+  </div>
+
+  <div class="middle-nav">
+    <ul class="middle-nav-links">
+       {% for link in linklists['main-menu'].link %}
+        <li>{{ link.title | link_to: 'link.url' }}</li>
+       {% endfor %}
+    </ul>
+  </div>
+</nav>
 
 {% schema %}
 {
