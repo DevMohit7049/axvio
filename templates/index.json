@@ -16,9 +16,14 @@
         "description_text": "this is description text",
         "image": "shopify://shop_images/one.jpg"
       }
+    },
+    "grid": {
+      "type": "grid",
+      "settings": {}
     }
   },
   "order": [
-    "hero"
+    "hero",
+    "grid"
   ]
 }

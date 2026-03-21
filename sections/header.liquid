@@ -37,7 +37,7 @@
 <style>
   .header-nav{
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
     margin:0;
     padding:1px;
     background-color:color;
@@ -69,6 +69,26 @@
     text-decoration:none;
     color:inherit;
   }
+
+  .right-nav{
+    display: flex;
+    align-items: center;
+  }
+
+  .right-nav p{
+    font-size:17px;
+    font-weight:bold;
+    color:white;
+    position:absolute;
+    top:5px;
+    right:246px;
+    background-color:#196d8f;
+    padding:3px 0px;
+    min-width:12px;
+    text-align:center;
+    line-height:1;
+  }
+
 
   @media (max-width:480px){
     .header-nav{

@@ -1,0 +1,127 @@
+<section>
+  <div class="grid-container">
+    {% if section.settings.image1 != blank %}
+      <div class="im-one">
+        <h1></h1>
+      </div>
+    {% else %}
+      <div class="def-image"></div>
+    {% endif %}
+
+    {% if section.settings.image2 != blank %}
+      <div class="im-two">
+        <h1></h1>
+      </div>
+    {% else %}
+      <div class="def-image"></div>
+    {% endif %}
+
+    {% if section.settings.image3 != blank %}
+      <div class="im-three">
+        <h1></h1>
+      </div>
+    {% else %}
+      <div class="def-image"></div>
+    {% endif %}
+
+    {% if section.settings.image4 != blank %}
+      <div class="im-four">
+        <h1></h1>
+      </div>
+    {% else %}
+      <div class="def-image"></div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+    .grid-container{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      grid-template-rows:repreat(2,1fr);
+      gap:10px;
+      margin-bottom:10px;
+      padding-bottom:10px;
+      height:700px;
+    }
+
+    .def-image{
+      background-image:url("{{ 'ten.jpg' | asset_url }}");
+      background-size:cover;
+      background-position:center;
+      width:100%;
+      height:100%;
+    }
+
+  .im-one{
+      background-image:url("{{ section.settings.image1 | image_url  }}");
+      background-size:cover;
+      background-position:center;
+      width:100%;
+      height:100%;
+    }
+
+  .im-two{
+      background-image:url("{{ section.settings.image2 | image_url  }}");
+      background-size:cover;
+      background-position:center;
+      width:100%;
+      height:100%;
+    }
+
+
+  .im-three{
+      background-image:url("{{ section.settings.image3 | image_url  }}");
+      background-size:cover;
+      background-position:center;
+      width:100%;
+      height:100%;
+    }
+
+
+  .im-four{
+      background-image:url("{{ section.settings.image4 | image_url  }}");
+      background-size:cover;
+      background-position:center;
+      width:100%;
+      height:100%;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "grid",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "image",
+      "info": "400 X 120px "
+    },
+        {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "image",
+      "info": "400 X 120px "
+    },
+        {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "image",
+      "info": "400 X 120px "
+    },
+        {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "image",
+      "info": "400 X 120px "
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "grid "
+    }
+  ]
+}
+{% endschema %}
