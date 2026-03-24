@@ -17,13 +17,18 @@
         "image": "shopify://shop_images/one.jpg"
       }
     },
-    "grid":{
-      "type":"grid",
+    "grid": {
+      "type": "grid",
+      "settings": {}
     },
-
-    "card":{
-      "type":"card"
+    "card": {
+      "type": "card",
+      "settings": {}
     }
   },
-  "order": ["hero","grid","card"]
+  "order": [
+    "hero",
+    "grid",
+    "card"
+  ]
 }

@@ -19,37 +19,6 @@
   ],
   "current": {
     "sections": {
-      "announcement-bar": {
-        "type": "announcement-bar",
-        "blocks": {
-          "message_a6ATjQ": {
-            "type": "message",
-            "settings": {
-              "message": "hello world"
-            }
-          },
-          "message_jLAgfg": {
-            "type": "message",
-            "settings": {
-              "message": "Free shipping over $75 USD"
-            }
-          },
-          "message_mQWGdn": {
-            "type": "message",
-            "settings": {
-              "message": "BOGO: Buy one, get one 50% off"
-            }
-          }
-        },
-        "block_order": [
-          "message_a6ATjQ",
-          "message_jLAgfg",
-          "message_mQWGdn"
-        ],
-        "settings": {
-          "show_bar": true
-        }
-      },
       "header": {
         "type": "header",
         "settings": {}
