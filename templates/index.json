@@ -20,9 +20,9 @@
     "grid": {
       "type": "grid",
       "settings": {
-        "image1": "shopify://shop_images/one.jpg",
-        "image2": "shopify://shop_images/seven.jpg",
-        "image3": "shopify://shop_images/health.jpg",
+        "image1": "shopify://shop_images/two.jpg",
+        "image2": "shopify://shop_images/m.jpg",
+        "image3": "shopify://shop_images/j.jpg",
         "image4": "shopify://shop_images/l.jpg"
       }
     }
