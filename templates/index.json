@@ -19,7 +19,12 @@
     },
     "grid": {
       "type": "grid",
-      "settings": {}
+      "settings": {
+        "image1": "shopify://shop_images/two.jpg",
+        "image2": "shopify://shop_images/one.jpg",
+        "image3": "shopify://shop_images/m.jpg",
+        "image4": "shopify://shop_images/k.jpg"
+      }
     },
     "card": {
       "type": "card",
